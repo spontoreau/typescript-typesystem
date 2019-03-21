@@ -9,8 +9,8 @@
   
     type PersonKeys = Exclude<keyof Employee, "salary">
   
-    type Pick<T, Keys extends keyof T> = {
-      [K in Keys]: T[K]
+    type Pick<T, U extends keyof T> = {
+      [K in U]: T[K]
     };
   
     type Person = Pick<Employee, Exclude<keyof Employee, "salary">>;
